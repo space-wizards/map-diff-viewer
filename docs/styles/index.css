@@ -2,23 +2,22 @@
     box-sizing: border-box;
 }
 
-.img-comp-container {
+.container {
     position: relative;
-    height: 200px; /* same as the images */
 }
 
-.img-comp-img {
+.image {
     position: absolute;
     width: auto;
     height: auto;
     overflow: hidden;
 }
 
-.img-comp-img img {
+.image img {
     display: block;
 }
 
-.img-comp-slider {
+.slider {
     position: absolute;
     z-index: 9;
     cursor: ew-resize;

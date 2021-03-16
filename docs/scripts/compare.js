@@ -1,5 +1,5 @@
 function compare() {
-    const x = document.getElementsByClassName("img-comp-overlay");
+    const x = document.getElementsByClassName("overlay");
 
     for (let i = 0; i < x.length; i++) {
         const image = x[i];
@@ -12,7 +12,7 @@ function compare() {
         image.style.width = (width / 2) + "px";
 
         const slider = document.createElement("DIV");
-        slider.setAttribute("class", "img-comp-slider");
+        slider.setAttribute("class", "slider");
 
         image.parentElement.insertBefore(slider, image);
 
