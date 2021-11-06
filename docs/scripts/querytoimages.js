@@ -1,16 +1,24 @@
 function queryToImages() {
-    var oldUrl = getURLParameter("old");
-    var newUrl = getURLParameter("new");
+    const oldUrl = getURLParameter("old");
+    const newUrl = getURLParameter("new");
 
-    if (oldUrl === null || newUrl === null) {
+    if (newUrl === null) {
         return;
     }
 
-    var oldImage = document.getElementById("old-image");
-    var newImage = document.getElementById("new-image");
+    const newImage = document.getElementById("new-image");
+
+    if (oldUrl === null) {
+        newImage.src = newUrl;
+        return;
+    }
+
+    const oldImage = document.getElementById("old-image");
 
     oldImage.src = oldUrl;
     newImage.src = newUrl;
+
+    compare();
 }
 
 function getURLParameter(name) {

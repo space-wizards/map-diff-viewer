@@ -39,7 +39,7 @@ function compare() {
             event = event || window.event;
 
             const imageRect = image.getBoundingClientRect();
-            var pos = event.pageX - imageRect.left - window.pageXOffset;
+            let pos = event.pageX - imageRect.left - window.pageXOffset;
 
             if (pos < 0) pos = 0;
             if (pos > width) pos = width;
@@ -49,5 +49,3 @@ function compare() {
         }
     }
 }
-
-compare();
